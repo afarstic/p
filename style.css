@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #f7f9fc 0%, #e9eef4 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    padding: 1.5rem;
+}
+
+.card {
+    max-width: 680px;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 48px;
+    padding: 2.5rem 2.2rem;
+    box-shadow:
+            0 25px 40px -10px rgba(0, 20, 40, 0.2),
+            0 6px 12px rgba(0,0,0,0.03),
+            inset 0 1px 0 rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,255,255,0.5);
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 30px 50px -12px rgba(0, 20, 40, 0.25);
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: -0.01em;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.plaque {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 1.4rem 1.8rem;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow:
+            0 8px 18px -6px rgba(0, 20, 30, 0.08),
+            inset 0 0 0 1px rgba(255,255,255,0.9),
+            inset 0 2px 3px rgba(255,255,255,0.8);
+    border: 1px solid rgba(220, 230, 245, 0.6);
+    transition: all 0.2s ease;
+    word-wrap: break-word;
+}
+
+.input-plaque {
+    background: #ffffff;
+    cursor: text;
+    transition: border 0.15s, box-shadow 0.2s;
+    min-height: auto;
+    display: flex;
+    align-items: stretch;
+}
+
+.input-plaque:focus-within {
+    box-shadow:
+            0 8px 22px -8px rgba(46, 91, 255, 0.15),
+            inset 0 0 0 2px rgba(70, 130, 255, 0.25),
+            inset 0 2px 4px rgba(255,255,255,0.9);
+    border-color: #a0c0ff;
+}
+
+.text-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 450;
+    line-height: 1.5;
+    color: #1a2b3c;
+    resize: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    min-height: 1.5em;
+    field-sizing: content;
+}
+
+.text-input {
+    field-sizing: content;
+}
+
+.text-input::placeholder {
+    color: #9aabbf;
+    font-weight: 400;
+    font-size: 1.3rem;
+    opacity: 0.7;
+}
+
+.output-plaque {
+    background: #fbfdff;
+    min-height: 5.5rem;
+    display: flex;
+    align-items: center;
+    color: #1e2f40;
+    font-size: 1.4rem;
+    font-weight: 450;
+    line-height: 1.5;
+    box-shadow:
+            0 8px 18px -6px rgba(0, 0, 0, 0.05),
+            inset 0 0 0 1px #ffffff,
+            inset 0 2px 4px #ffffff;
+    border: 1px solid #d9e2ef;
+    transition: background 0.2s;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1.8rem 0 1.8rem 0;
+}
+
+.translate-btn {
+    background: #1e2f40;
+    color: white;
+    border: none;
+    padding: 0.9rem 2.8rem;
+    border-radius: 60px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 550;
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    box-shadow:
+            0 10px 18px -8px rgba(20, 40, 70, 0.3),
+            0 2px 4px rgba(0,0,0,0.05),
+            inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: all 0.15s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(4px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.translate-btn:hover {
+    background: #263b50;
+    transform: scale(1.02);
+    box-shadow: 0 14px 22px -10px #1a2e44;
+}
+
+.translate-btn:active {
+    transform: scale(0.98);
+    background: #162a3a;
+    box-shadow: 0 6px 10px -4px #0f1e2c;
+}
+
+.fade-translation {
+    transition: opacity 0.2s;
+}
+
+.placeholder-text {
+    color: #9aabbf;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.output-text {
+    transition: color 0.2s;
+}
+
+.footer {
+    text-align: center;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.footer-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #7a8b9f;
+    letter-spacing: 0.3px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.footer-text:hover {
+    opacity: 1;
+    color: #4a5f75;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.8rem 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .plaque {
+        padding: 1.2rem 1.2rem;
+    }
+
+    .text-input {
+        font-size: 1.2rem;
+    }
+
+    .output-plaque {
+        font-size: 1.2rem;
+    }
+
+    .translate-btn {
+        padding: 0.7rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .footer-text {
+        font-size: 0.85rem;
+    }
+}
