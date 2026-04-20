@@ -36,8 +36,13 @@
                         ans += 'ч';
                     }
                 }
-                else if (word.slice(0, 3) === 'дру') {
-                    ans += word.slice(0, 3) + 'н' + word.slice(4);
+                else if (word.slice(0, 3).toLowerCase() === 'дру' && word.length > 3) {
+                    if (up(word[3])) {
+                        ans += word.slice(0, 3) + 'Н' + word.slice(4);
+                    }
+                    else {
+                        ans += word.slice(0, 3) + 'н' + word.slice(4);
+                    }
                 }
                 else {
                     if (word[word.length - 1] === 'й') {
